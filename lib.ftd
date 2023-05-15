@@ -1,0 +1,241 @@
+-- import: sarvom.github.io/holy-angel/assets
+
+-- component page:
+ftd.image-src logo: $assets.files.images.logo.png
+string cta-text-1: Home
+string cta-text-2: POAP
+string cta-text-3: How To Claim
+string cta-text-4: About Us
+string cta-text-5: FAQs
+string cta-button-1: Connect Wallet
+children c:
+
+-- ftd.column:
+width: fill-container
+background.solid: $inherited.colors.background.base
+
+-- navbar: 
+logo: $page.logo
+cta-text-1: $page.cta-text-1
+cta-text-2: $page.cta-text-2
+cta-text-3: $page.cta-text-3
+cta-text-4: $page.cta-text-4
+cta-text-5: $page.cta-text-5
+cta-button-1: $page.cta-button-1
+
+-- ftd.column:
+width: fill-container
+children: $page.c
+
+-- end: ftd.column
+
+-- footer:
+text-1: © Admint
+cta-text-1: Terms of Service
+cta-text-2: Privacy Policy
+url-1: /
+url-2: /
+
+-- end: ftd.column
+
+-- end: page
+
+
+
+
+
+
+
+
+
+
+-- component navbar:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-button-1:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+
+-- ftd.image:
+src: $navbar.logo
+margin-left.px: 78
+margin-vertical.px: 8
+
+-- ftd.row:
+
+-- ftd.text: $navbar.cta-text-1
+role: $inherited.types.label-large
+text-align: center
+margin-vertical.px: 33
+margin-horizontal.px: 32
+color: $inherited.colors.cta-tertiary.base
+
+-- ftd.text: $navbar.cta-text-2
+role: $inherited.types.label-large
+text-align: center
+margin-vertical.px: 33
+margin-horizontal.px: 32
+color: $inherited.colors.cta-tertiary.base
+
+-- ftd.text: $navbar.cta-text-3
+role: $inherited.types.label-large
+text-align: center
+margin-vertical.px: 33
+margin-horizontal.px: 32
+color: $inherited.colors.cta-tertiary.base
+
+-- ftd.text: $navbar.cta-text-4
+role: $inherited.types.label-large
+text-align: center
+margin-vertical.px: 33
+margin-horizontal.px: 32
+color: $inherited.colors.cta-tertiary.base
+
+-- ftd.text: $navbar.cta-text-5
+role: $inherited.types.label-large
+text-align: center
+margin-vertical.px: 33
+margin-horizontal.px: 32
+color: $inherited.colors.cta-tertiary.base
+
+-- ftd.row:
+margin-left.px: 478
+margin-vertical.px: 29
+
+-- ftd.text: $navbar.cta-button-1
+role: $inherited.types.label-large
+text-align: center
+padding-vertical.px: 12
+padding-horizontal.px: 32
+border-width.px: 2
+border-radius.px: 4
+border-color: $inherited.colors.cta-secondary.border
+color: $inherited.colors.cta-secondary.text
+link: /
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component footer:
+string text-1:
+optional string text-2:
+string cta-text-1:
+string cta-text-2:
+string url-1:
+string url-2:
+
+-- ftd.row:
+width: fill-container
+height: hug-content
+padding-horizontal.px: 200
+padding-vertical.px: 125
+spacing.fixed.px: 615
+
+-- ftd.text: $footer.text-1
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $footer.text-2
+if: {footer.text-2 != NULL}
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.row:
+spacing.fixed.px: 24
+
+-- ftd.text: $footer.cta-text-1
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer.url-1
+
+-- ftd.text: $footer.cta-text-2
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+link: $footer.url-2
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: footer
+
+
+
+
+
+
+
+
+
+
+-- component hero:
+ftd.image-src cover:
+caption title:
+string heading:
+body content:
+
+-- ftd.column:
+align-self: center
+align-content: center
+
+-- ftd.row:
+align-self: center
+align-content: center
+width: fill-container
+margin-top.px: 108
+
+
+-- ftd.column:
+width.fixed.percent: 35.8
+margin-right.px: 140
+
+-- ftd.text: $hero.heading
+role: $inherited.types.heading-medium
+color: $inherited.colors.text
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-large
+color: $inherited.colors.text
+
+-- ftd.text: $hero.content
+margin-top.px: 24
+margin-bottom.px: 48
+role: $inherited.types.copy-large
+color: $inherited.colors.text
+
+-- end: ftd.column
+
+-- ftd.row:
+
+-- ftd.image:
+src: $hero.cover
+width.fixed.percent: 90
+
+-- end: ftd.row
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: hero
+
