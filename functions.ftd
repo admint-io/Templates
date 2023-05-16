@@ -1,0 +1,4 @@
+-- void connectWallet():
+js: js/index.js:type=module
+
+connectWallet()

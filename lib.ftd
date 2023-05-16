@@ -1,6 +1,7 @@
 -- import: admint-io.github.io/Templates/assets
 -- import: admint-io.github.io/Templates/colors as colors
 -- import: sarvom.github.io/holy-angel-typography 
+-- import: admint-io.github.io/Templates/functions as funct
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -109,6 +110,7 @@ margin-left.px: 478
 margin-vertical.px: 29
 
 -- ftd.text: $navbar.cta-button-1
+$on-click$: $funct.connectWallet()
 role: $inherited.types.label-large
 style: bold
 text-align: center
@@ -119,7 +121,6 @@ border-radius.px: 4
 background.solid: $colors.accent-primary-
 border-color: $colors.accent-secondary-
 color: $colors.text-
-link: /
 
 -- end: ftd.row
 
