@@ -1,6 +1,6 @@
 -- ftd.color base-:
 light: #00011d
-dark: #0F121F
+dark: #00011d
 
 -- ftd.color step-1-:
 light: #F1F3F8
@@ -198,12 +198,13 @@ border: $cta-danger-border-
 text: $cta-danger-text-
 
 -- ftd.color accent-primary-:
-light: #2dd4bf
-dark: #2dd4bf
+light: #D12EEF
+dark: #D12EEF
+
 
 -- ftd.color accent-secondary-:
-light: #4fb2df
-dark: #4fb2df
+light: #6F59E9
+dark: #6F59E9
 
 -- ftd.color accent-tertiary-:
 light: #c5cbd7

@@ -11,17 +11,16 @@ From safeguarding your personal data to protecting your community, our aim is to
 you with the latest cyber education tools & strategies. Let's work together to build a 
 resilient future - Be Secured, Stay Secured!"
 
--- lib.image-with-button: Crystal Card 3
+-- lib.image-with-button: CYBERSECURITY  CONFERENCE  TOKEN
 pic: $assets.files.images.crystal.png
 text-1: Blockchain: Polygon 
 text-2: POAP Type: Speaker
 button: Claim Now
 button-url:/
 
-Purchasers of this collectible on the primary market are entitled to incredible utilities
-such as a coaching session with Shadow esports drivers, and even the chance to race them 
-in-game. McLaren Shadow is our virtual racing programme that shadows our real-world 
-equivalent.
+This POAP or Proof of Attendance Protocol is a non-fungible token that proves you 
+participated in the 2nd Regional Cybersecurity Conference conducted by The School of 
+Computing, Holy Angel University on 10th May 2023. 
 
 -- lib.countdown-with-info: 2nd Regional cybersecurity conference
 pic: $assets.files.images.conf.png
