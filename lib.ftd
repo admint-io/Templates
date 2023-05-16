@@ -1,5 +1,6 @@
 -- import: admint-io.github.io/Templates/assets
 -- import: admint-io.github.io/Templates/colors as colors
+-- import: sarvom.github.io/holy-angel-typography 
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -13,6 +14,7 @@ children c:
 
 -- ftd.column:
 width: fill-container
+types: $holy-angel-typography.types
 background.solid: $colors.base-
 
 -- navbar: 
@@ -200,10 +202,12 @@ background.image: $assets.files.images.hero-bg-1.png
 
 -- ftd.column:
 margin-horizontal.px: 33
+width.fixed.percent: 49
 
 -- ftd.text: $hero.heading
 role: $inherited.types.heading-large
 color: $colors.text-
+margin-right.px: 125
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
@@ -533,6 +537,7 @@ width.fixed.percent: 80
 -- ftd.row:
 width: fill-container
 spacing: space-between
+padding-bottom.px: 20
 border-bottom-width.px: 2
 color: $colors.text-
 
