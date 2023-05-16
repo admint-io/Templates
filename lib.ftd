@@ -1,4 +1,5 @@
 -- import: admint-io.github.io/Templates/assets
+-- import: admint-io.github.io/Templates/colors as colors
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -61,48 +62,46 @@ string cta-button-1:
 -- ftd.row:
 width: fill-container
 height: hug-content
+margin-vertical.px: 8
 
 -- ftd.image:
 src: $navbar.logo
 margin-left.px: 78
-margin-vertical.px: 8
 
 -- ftd.row:
+margin-vertical.px: 33
 
 -- ftd.text: $navbar.cta-text-1
 role: $inherited.types.label-large
 text-align: center
-margin-vertical.px: 33
 margin-horizontal.px: 32
 color: $inherited.colors.cta-tertiary.base
 
 -- ftd.text: $navbar.cta-text-2
 role: $inherited.types.label-large
 text-align: center
-margin-vertical.px: 33
 margin-horizontal.px: 32
 color: $inherited.colors.cta-tertiary.base
 
 -- ftd.text: $navbar.cta-text-3
 role: $inherited.types.label-large
 text-align: center
-margin-vertical.px: 33
 margin-horizontal.px: 32
 color: $inherited.colors.cta-tertiary.base
 
 -- ftd.text: $navbar.cta-text-4
 role: $inherited.types.label-large
 text-align: center
-margin-vertical.px: 33
 margin-horizontal.px: 32
 color: $inherited.colors.cta-tertiary.base
 
 -- ftd.text: $navbar.cta-text-5
 role: $inherited.types.label-large
 text-align: center
-margin-vertical.px: 33
 margin-horizontal.px: 32
 color: $inherited.colors.cta-tertiary.base
+
+-- end: ftd.row
 
 -- ftd.row:
 margin-left.px: 478
@@ -118,8 +117,6 @@ border-radius.px: 4
 border-color: $inherited.colors.cta-secondary.border
 color: $inherited.colors.cta-secondary.text
 link: /
-
--- end: ftd.row
 
 -- end: ftd.row
 
@@ -195,33 +192,28 @@ string heading:
 body content:
 
 -- ftd.column:
-align-self: center
-align-content: center
+width: fill-container
+margin-top.px: 100
 
 -- ftd.row:
-align-self: center
-align-content: center
 width: fill-container
-margin-top.px: 108
-
 
 -- ftd.column:
-width.fixed.percent: 35.8
-margin-right.px: 140
+width.fixed.percent: 50
 
 -- ftd.text: $hero.heading
-role: $inherited.types.heading-medium
-color: $inherited.colors.text
+role: $inherited.types.heading-large
+color: $colors.text-
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
-color: $inherited.colors.text
+color: $colors.text-
 
 -- ftd.text: $hero.content
 margin-top.px: 24
 margin-bottom.px: 48
 role: $inherited.types.copy-large
-color: $inherited.colors.text
+color: $colors.text-
 
 -- end: ftd.column
 
@@ -252,31 +244,58 @@ width.fixed.percent: 90
 ftd.image-src pic:
 caption title:
 body body:
-string text:
+string text-1:
+string text-2:
 string button:
 string button-url:
 
 -- ftd.column:
 width: fill-container
+margin-vertical.px: 150
 
 -- ftd.row:
+margin-horizontal.px: 44
+spacing.fixed.px: 55
 
 -- ftd.image: 
 src: $image-with-button.pic
 
 -- ftd.column:
+margin-vertical.px: 215
 
 -- ftd.text: $image-with-button.title
 role: $inherited.types.heading-medium
+color: $colors.text-
+margin-bottom.px: 24
 
 -- ftd.text: $image-with-button.body
 role: $inherited.types.copy-regular
+color: $colors.text-
+margin-bottom.px: 24
 
--- ftd.text: $image-with-button.text
+-- ftd.row:
+spacing.fixed.px: 40
+margin-bottom.px: 40
+
+-- ftd.text: $image-with-button.text-1
 role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- ftd.text: $image-with-button.text-2
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.row
 
 -- ftd.text: $image-with-button.button
+width: fill-container
+text-align: center
+padding-vertical.px: 20
+padding-horizontal.px: 10
+border-width.px: 1
+border-radius.px: 6
 role: $inherited.types.copy-regular
+color: $colors.text-
 link: $image-with-button.button-url
 
 -- end: ftd.column
@@ -311,6 +330,11 @@ width: fill-container
 
 -- ftd.row:
 width: fill-container
+spacing.fixed.px: 167
+margin-left.px: 132
+margin-right.px: 105
+margin-top.px: 33
+margin-bottom.px: 113
 
 -- ftd.image: 
 src: $countdown-with-info.pic
@@ -318,26 +342,41 @@ src: $countdown-with-info.pic
 -- ftd.column: 
 
 -- ftd.text: $countdown-with-info.title
-role: $inherited.types.copy-regular
+role: $inherited.types.heading-small
+color: $colors.text-
+margin-bottom.px: 40
 
 -- ftd.text: $countdown-with-info.heading
-role: $inherited.types.copy-regular
+role: $inherited.types.heading-medium
+color: $colors.text-
+margin-bottom.px: 40
 
 -- ftd.row:
+margin-bottom.px: 40
 
 -- ftd.image:
 src: $countdown-with-info.icon
+margin-right.px: 16
 
 -- ftd.text: $countdown-with-info.text
 role: $inherited.types.copy-regular
+color: $colors.text-
 
 -- end: ftd.row
 
 -- ftd.text: $countdown-with-info.counter
-role: $inherited.types.copy-regular
+width: fill-container
+text-align: center
+padding-vertical.px: 20
+padding-horizontal.px: 10
+border-width.px: 1
+border-radius.px: 6
+role: $inherited.types.copy-small
+color: $colors.text-
 
 -- ftd.text: $countdown-with-info.reminder
-role: $inherited.types.copy-regular
+role: $inherited.types.copy-small
+color: $colors.text-
 
 -- end: ftd.column
 

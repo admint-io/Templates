@@ -7,12 +7,14 @@
 heading: Building a resilient future through
 cover: $assets.files.images.hero.png
 
-We are an award-winning strategic design company that provides consultancy services and 
-help you create outstanding digital products.
+From safeguarding your personal data to protecting your community, our aim is to equip 
+you with the latest cyber education tools & strategies. Let's work together to build a 
+resilient future - Be Secured, Stay Secured!"
 
 -- lib.image-with-button: Crystal Card 3
 pic: $assets.files.images.crystal.png
-text: Blockchain: Polygon POAP Type: Speaker
+text-1: Blockchain: Polygon 
+text-2: POAP Type: Speaker
 button: Claim Now
 button-url:/
 
