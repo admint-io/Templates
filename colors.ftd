@@ -1,6 +1,6 @@
 -- ftd.color base-:
 light: #00011d
-dark: #0F121F
+dark: #00011d
 
 -- ftd.color step-1-:
 light: #F1F3F8
