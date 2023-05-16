@@ -1,4 +1,4 @@
 -- void connectWallet():
-js: js/figma.js:type=module
+js: js/index.js:type=module
 
 connectWallet()

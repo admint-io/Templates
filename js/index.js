@@ -1,3 +1,39 @@
+import "https://cdn.ethers.io/scripts/ethers-v3.min.js";
+import "https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js";
+import * as config from "./config.js";
+
+var campaignId="default";
+var inviteCode="default";
+var domainName="default";
+
+window.connectWallet = async function connectWallet() {
+    const provider = new ethers.providers.Web3Provider(window.ethereum)
+    await provider.send("eth_requestAccounts", []);
+    const signer = provider.getSigner()
+    const accounts = await provider.listAccounts();
+    console.log("account is ", accounts[0]);
+    //const campaignId=await window.ftd.get_value("main","distributionPage/#campaignId"); 
+    console.log("campaign id is ",campaignId);
+
+    fetch(`${config.DISTRIBUTION_BASE_BACKEND_URL}/open/dropWallet`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "walletAddress": `${accounts[0]}`,
+            "campaignId": `${campaignId}`,
+            "inviteCode": `${inviteCode}`
+        })
+    })
+        .then(response => response.json())
+        .then(data => console.log(data))
+        .catch(error => console.error(error))
+
+    window.ftd.set_value("distributionPage/#connectState", "Connected");
+    window.ftd.set_value("distributionPage/#state", 1);
+}
+
 import "https://cdnjs.cloudflare.com/ajax/libs/axios/1.3.4/axios.min.js";
 
 
@@ -390,8 +426,33 @@ function figma_json_to_ftd(json) {
 }
 
 window.onload = async function () { 
-        const colorSchemeUrl="https://admint-io.github.io/ftdeditor/colorScheme1.json";
-        fetchColorScheme(colorSchemeUrl).then((figmaJson)=>{
+        readUrlParams();  
+  }
+
+  window.readUrlParams = async function readUrlParams() {
+    var queryString = window.location.search;
+  
+    var queryParameters = queryString.slice(1);
+    
+    var parametersObject = {};
+    queryParameters.split('&').forEach(function(parameter) {
+      var keyValue = parameter.split('=');
+      var key = decodeURIComponent(keyValue[0]);
+      var value = decodeURIComponent(keyValue[1]);
+      parametersObject[key] = value;
+    });
+    
+    var cName = parametersObject['cname'];
+    var inviteId = parametersObject['invite_id'];
+    
+    console.log("cname is ",domainName);
+    console.log("invite id is ",inviteId);
+
+    domainName=cName;
+    inviteCode=inviteId;
+  
+    fetchUiComponents(domainName,inviteCode).then((result)=>{
+        fetchColorScheme(result.values[0].colorSchemeUrl).then((figmaJson)=>{
             figma_json_to_ftd(figmaJson).then((resultColorsObj)=>{
                 console.log("result colors object is ",resultColorsObj);  
                 console.log("starting to update ftd colors");  
@@ -409,24 +470,55 @@ window.onload = async function () {
                     catch(e){console.error(e);}
                 }); 
                 console.log("ftd colors updated");  
-            });
-            
-        })
-    
-       
+            });            
+        });
+    });
+  }
+
+  window.fetchUiComponents = async function fetchUiComponents(domainName,inviteId) {
+
+    return new Promise(function(resolve, reject) {
+      const url = `${config.DISTRIBUTION_BASE_BACKEND_URL}/sitedata/${domainName}`;
+      axios
+      .get(url, config)
+      .then((response) => {
+        const respData = response.data;
+        console.log("response from postman is ", respData);    
+
+        campaignId=respData.values[0].campaignId;
+        window.ftd.set_value(
+          "template/content#hero",
+          respData.values[0].heroText
+        );
+        // const image=document.querySelector('[data-id="1,3,0,0,0,1:main"]');
+        // image.src=respData.values[0].bannerImageUrl;
+        window.ftd.set_value(
+          "template/summer/#url1",
+          respData.values[0].bannerImageUrl
+        );       
+      
+        resolve(respData);
+      })
+      .catch((error) => {
+        console.error(error);
+        alert(error);
+        reject(error);
+      });
+      });
   }
 
   
 
 window.fetchColorScheme = async function fetchColorScheme(colorSchemeUrl) {
     return new Promise(async (resolve, reject) => {
-        const config = {
+        const url=`${config.COLOR_SCHEME_BASE_URL}/${colorSchemeUrl}`;
+        const configuration = {
             headers: {
               "Content-Type": "application/json",
             },
           };
         axios
-        .get(colorSchemeUrl, config)
+        .get(url, configuration)
         .then((response) => {
             const respData = JSON.stringify(response.data);
             resolve(respData);
@@ -439,7 +531,4 @@ window.fetchColorScheme = async function fetchColorScheme(colorSchemeUrl) {
     });            
 }
 
-window.connectWallet = async function connectWallet() {
-    console.log("connect wallet pressed");
-}
 

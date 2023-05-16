@@ -118,7 +118,6 @@ border-width.px: 2
 border-radius.px: 4
 border-color: $colors.cta-secondary-border-
 color: $colors.cta-secondary-text-
-link: /
 
 -- end: ftd.row
 
