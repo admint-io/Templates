@@ -1,5 +1,6 @@
 -- import: admint-io.github.io/Templates/assets
 -- import: admint-io.github.io/Templates/colors as colors
+-- import: admint-io.github.io/Templates/functions as funct
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -108,6 +109,7 @@ margin-left.px: 478
 margin-vertical.px: 29
 
 -- ftd.text: $navbar.cta-button-1
+$on-click$: $funct.connectWallet()
 role: $inherited.types.label-large
 text-align: center
 padding-vertical.px: 12
@@ -116,7 +118,7 @@ border-width.px: 2
 border-radius.px: 4
 border-color: $inherited.colors.cta-secondary.border
 color: $inherited.colors.cta-secondary.text
-link: /
+
 
 -- end: ftd.row
 
