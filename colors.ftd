@@ -1,5 +1,5 @@
 -- ftd.color base-:
-light: #FFFFFF
+light: #00011d
 dark: #0F121F
 
 -- ftd.color step-1-:
@@ -34,7 +34,7 @@ light: #362FD9
 dark: #362FD9
 
 -- ftd.color text-:
-light: red
+light: #ffffff
 dark: #ffffff
 
 -- ftd.color text-strong-:
@@ -125,7 +125,7 @@ text: $cta-secondary-text-
 
 -- ftd.color cta-tertiary-base-:
 light: #909192
-dark: #FFFFFF
+dark: #909192
 
 -- ftd.color cta-tertiary-hover-:
 light: #c7cbd1

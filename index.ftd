@@ -31,5 +31,42 @@ text: University Theatre, SFJ Blog, Holy Angel University
 counter: 12 days : 16 hr : 30 min
 reminder: Time Left to claim NFT
 
+-- lib.image-with-content-section: How to Claim
+
+-- lib.image-with-content: Connect your wallet
+pic: $assets.files.images.connect.png
+number: 01
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- lib.image-with-content: Claim NFT
+pic: $assets.files.images.claim.png
+number: 02
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- lib.image-with-content: View NFT
+pic: $assets.files.images.view.png
+number: 03
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- end: lib.image-with-content-section
+
+-- lib.about: About Us
+pic: $assets.files.images.people.png
+
+A design approach is a general philosophy that may or may not include a guide for 
+specific methods. A design approach is a general philosophy that may or may not include 
+a guide for specific methods.A design approach is a general philosophy that may or may 
+not include a guide for specific methods.A design approach is a general philosophy 
+that may or may not include a guide for specific methods.
+
 -- end: lib.page
 
