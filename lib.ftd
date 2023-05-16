@@ -150,6 +150,7 @@ string url-3: /
 align-self: center
 align-content: center
 width: fill-container
+margin-vertical.px: 100
 
 -- ftd.row:
 width.fixed.percent: 80
@@ -173,7 +174,6 @@ link: $footer.url-3
 
 -- ftd.row:
 margin-top.px: 32
-margin-bottom.px: 96
 spacing.fixed.px: 10
 
 -- ftd.text: $footer.text
