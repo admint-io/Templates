@@ -17,6 +17,10 @@ width: fill-container
 types: $holy-angel-typography.types
 background.solid: $colors.base-
 
+-- banner: Collect your POAP NFT here.  
+cta-text: CLAIM NOW!
+cta-url: /
+
 -- navbar: 
 logo: $page.logo
 cta-text-1: $page.cta-text-1
@@ -579,3 +583,47 @@ color: $colors.text-
 -- end: ftd.column
 
 -- end: faq
+
+
+
+
+
+
+
+
+
+
+-- component banner:
+caption title:
+string cta-text:
+string cta-url:
+ftd.image-src close: $assets.files.images.cross.png
+boolean $open: true
+
+-- ftd.row:
+if: { banner.open }
+width: fill-container
+background.solid: $colors.accent-primary-
+spacing: space-between
+
+-- ftd.row:
+spacing.fixed.px: 10
+
+-- ftd.text: $banner.title
+role: $inherited.types.copy-small
+color: $colors.text-
+
+-- ftd.text: $banner.cta-text
+color: $colors.text-
+role: $inherited.types.copy-small
+link: $banner.cta-url
+
+-- end: ftd.row
+
+-- ftd.image: 
+src: $banner.close
+$on-click$: $ftd.set-bool($a = $banner.open, v = false)
+
+-- end: ftd.row
+
+-- end: banner
