@@ -1,5 +1,5 @@
--- import: sarvom.github.io/holy-angel/assets
--- import: sarvom.github.io/holy-angel/lib
+-- import: admint-io.github.io/Templates/assets
+-- import: admint-io.github.io/Templates/lib
 
 -- lib.page:
 
@@ -9,6 +9,25 @@ cover: $assets.files.images.hero.png
 
 We are an award-winning strategic design company that provides consultancy services and 
 help you create outstanding digital products.
+
+-- lib.image-with-button: Crystal Card 3
+pic: $assets.files.images.crystal.png
+text: Blockchain: Polygon POAP Type: Speaker
+button: Claim Now
+button-url:/
+
+Purchasers of this collectible on the primary market are entitled to incredible utilities
+such as a coaching session with Shadow esports drivers, and even the chance to race them 
+in-game. McLaren Shadow is our virtual racing programme that shadows our real-world 
+equivalent.
+
+-- lib.countdown-with-info: 2nd Regional cybersecurity conference
+pic: $assets.files.images.conf.png
+heading: 10 | May | 2023
+icon: $assets.files.images.location_on.png
+text: University Theatre, SFJ Blog, Holy Angel University
+counter: 12 days : 16 hr : 30 min
+reminder: Time Left to claim NFT
 
 -- end: lib.page
 

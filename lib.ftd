@@ -1,4 +1,4 @@
--- import: sarvom.github.io/holy-angel/assets
+-- import: admint-io.github.io/Templates/assets
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -214,7 +214,7 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
 -- ftd.text: $hero.title
-role: $inherited.types.heading-large
+role: $inherited.types.heading-hero
 color: $inherited.colors.text
 
 -- ftd.text: $hero.content
@@ -238,4 +238,113 @@ width.fixed.percent: 90
 -- end: ftd.column
 
 -- end: hero
+
+
+
+
+
+
+
+
+
+
+-- component image-with-button:
+ftd.image-src pic:
+caption title:
+body body:
+string text:
+string button:
+string button-url:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+
+-- ftd.image: 
+src: $image-with-button.pic
+
+-- ftd.column:
+
+-- ftd.text: $image-with-button.title
+role: $inherited.types.heading-medium
+
+-- ftd.text: $image-with-button.body
+role: $inherited.types.copy-regular
+
+-- ftd.text: $image-with-button.text
+role: $inherited.types.copy-regular
+
+-- ftd.text: $image-with-button.button
+role: $inherited.types.copy-regular
+link: $image-with-button.button-url
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: image-with-button
+
+
+
+
+
+
+
+
+
+
+-- component countdown-with-info:
+ftd.image-src pic:
+caption title:
+string heading:
+ftd.image-src icon:
+string text:
+string counter:
+string reminder:
+
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image: 
+src: $countdown-with-info.pic
+
+-- ftd.column: 
+
+-- ftd.text: $countdown-with-info.title
+role: $inherited.types.copy-regular
+
+-- ftd.text: $countdown-with-info.heading
+role: $inherited.types.copy-regular
+
+-- ftd.row:
+
+-- ftd.image:
+src: $countdown-with-info.icon
+
+-- ftd.text: $countdown-with-info.text
+role: $inherited.types.copy-regular
+
+-- end: ftd.row
+
+-- ftd.text: $countdown-with-info.counter
+role: $inherited.types.copy-regular
+
+-- ftd.text: $countdown-with-info.reminder
+role: $inherited.types.copy-regular
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: countdown-with-info
+
 
