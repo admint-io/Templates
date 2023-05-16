@@ -121,7 +121,6 @@ border-radius.px: 4
 background.solid: $colors.accent-primary-
 border-color: $colors.accent-secondary-
 color: $colors.text-
-link: /
 
 -- end: ftd.row
 
