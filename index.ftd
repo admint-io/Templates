@@ -12,7 +12,8 @@ help you create outstanding digital products.
 
 -- lib.image-with-button: Crystal Card 3
 pic: $assets.files.images.crystal.png
-text: Blockchain: Polygon POAP Type: Speaker
+text-1: Blockchain: Polygon 
+text-2: POAP Type: Speaker
 button: Claim Now
 button-url:/
 

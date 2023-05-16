@@ -252,31 +252,58 @@ width.fixed.percent: 90
 ftd.image-src pic:
 caption title:
 body body:
-string text:
+string text-1:
+string text-2:
 string button:
 string button-url:
 
 -- ftd.column:
 width: fill-container
+margin-vertical.px: 150
 
 -- ftd.row:
+margin-horizontal.px: 44
+spacing.fixed.px: 55
 
 -- ftd.image: 
 src: $image-with-button.pic
 
 -- ftd.column:
+margin-vertical.px: 215
 
 -- ftd.text: $image-with-button.title
 role: $inherited.types.heading-medium
+color: $inherited.colors.text
+margin-bottom.px: 24
 
 -- ftd.text: $image-with-button.body
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
+margin-bottom.px: 24
 
--- ftd.text: $image-with-button.text
+-- ftd.row:
+spacing.fixed.px: 40
+margin-bottom.px: 40
+
+-- ftd.text: $image-with-button.text-1
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- ftd.text: $image-with-button.text-2
+role: $inherited.types.copy-regular
+color: $inherited.colors.text
+
+-- end: ftd.row
 
 -- ftd.text: $image-with-button.button
+width: fill-container
+text-align: center
+padding-vertical.px: 20
+padding-horizontal.px: 10
+border-width.px: 1
+border-radius.px: 6
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 link: $image-with-button.button-url
 
 -- end: ftd.column
@@ -319,9 +346,11 @@ src: $countdown-with-info.pic
 
 -- ftd.text: $countdown-with-info.title
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- ftd.text: $countdown-with-info.heading
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- ftd.row:
 
@@ -330,14 +359,17 @@ src: $countdown-with-info.icon
 
 -- ftd.text: $countdown-with-info.text
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- end: ftd.row
 
 -- ftd.text: $countdown-with-info.counter
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- ftd.text: $countdown-with-info.reminder
 role: $inherited.types.copy-regular
+color: $inherited.colors.text
 
 -- end: ftd.column
 
