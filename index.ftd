@@ -1,5 +1,5 @@
--- import: sarvom.github.io/holy-angel/assets
--- import: sarvom.github.io/holy-angel/lib
+-- import: admint-io/Templates/assets
+-- import: admint-io/Templates/lib
 
 -- lib.page:
 

@@ -1,4 +1,4 @@
--- import: sarvom.github.io/holy-angel/assets
+-- import: admint-io/Templates/assets
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
