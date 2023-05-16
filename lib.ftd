@@ -267,12 +267,16 @@ src: $image-with-button.pic
 -- ftd.column:
 
 -- ftd.text: $image-with-button.title
+role: $inherited.types.heading-medium
 
 -- ftd.text: $image-with-button.body
+role: $inherited.types.copy-regular
 
 -- ftd.text: $image-with-button.text
+role: $inherited.types.copy-regular
 
 -- ftd.text: $image-with-button.button
+role: $inherited.types.copy-regular
 link: $image-with-button.button-url
 
 -- end: ftd.column
@@ -314,8 +318,10 @@ src: $countdown-with-info.pic
 -- ftd.column: 
 
 -- ftd.text: $countdown-with-info.title
+role: $inherited.types.copy-regular
 
 -- ftd.text: $countdown-with-info.heading
+role: $inherited.types.copy-regular
 
 -- ftd.row:
 
@@ -323,12 +329,15 @@ src: $countdown-with-info.pic
 src: $countdown-with-info.icon
 
 -- ftd.text: $countdown-with-info.text
+role: $inherited.types.copy-regular
 
 -- end: ftd.row
 
 -- ftd.text: $countdown-with-info.counter
+role: $inherited.types.copy-regular
 
 -- ftd.text: $countdown-with-info.reminder
+role: $inherited.types.copy-regular
 
 -- end: ftd.column
 
