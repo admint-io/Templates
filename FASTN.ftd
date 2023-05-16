@@ -1,6 +1,6 @@
 -- import: fastn
 
--- fastn.package: admint-io/Templates
+-- fastn.package: admint-io.github.io/Templates
 
 -- fastn.dependency: fifthtry.github.io/doc-site as ds
 -- fastn.dependency: fifthtry.github.io/bling as bling

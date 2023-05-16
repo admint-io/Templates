@@ -1,4 +1,4 @@
--- import: admint-io/Templates/assets
+-- import: admint-io.github.io/Templates/assets
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
