@@ -31,5 +31,95 @@ text: University Theatre, SFJ Blog, Holy Angel University
 counter: 12 days : 16 hr : 30 min
 reminder: Time Left to claim NFT
 
+-- lib.container-with-title: How to Claim
+
+-- lib.image-with-content: Connect your wallet
+pic: $assets.files.images.connect.png
+number: 01
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- lib.image-with-content: Claim NFT
+pic: $assets.files.images.claim.png
+number: 02
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- lib.image-with-content: View NFT
+pic: $assets.files.images.view.png
+number: 03
+
+Design your drop of 1-5 NFTs and send us your artwork. We get that you're creative, so 
+take note: Sweet supports image, audio and video media assets. Make your NFT drop 
+interesting, engaging and fun.
+
+-- end: lib.container-with-title
+
+-- lib.about: About Us
+pic: $assets.files.images.people.png
+
+A design approach is a general philosophy that may or may not include a guide for 
+specific methods. A design approach is a general philosophy that may or may not include 
+a guide for specific methods.A design approach is a general philosophy that may or may 
+not include a guide for specific methods.A design approach is a general philosophy 
+that may or may not include a guide for specific methods.
+
+-- lib.container-with-title: FAQs
+
+-- lib.faq: How do I get a crypto wallet?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: What is a POAP token?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: Which blockchain are these tokens minted on?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: Do I have to pay anything to claim this NFT?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: How long will it take for the NFT to arrive in my wallet ?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: How can I use this POAP token in the future?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- lib.faq: Can I trade, sell or give this token to someone else?
+
+Anyone on the final allow list may mint up to three (3) NFTs in the Collection per 
+wallet. Please note that the max mint number also applies to the public mint time 
+period. If you reach your max mint during the allow list sale, you will not be able to 
+mint more pieces on that wallet even in the public mint window.
+
+-- end: lib.container-with-title
+
 -- end: lib.page
 
