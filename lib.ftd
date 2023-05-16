@@ -194,6 +194,7 @@ body content:
 -- ftd.column:
 width: fill-container
 margin-top.px: 100
+background.image: $assets.files.images.hero-bg-1.png
 
 -- ftd.row:
 
@@ -439,17 +440,28 @@ color: $colors.text-
 
 
 
--- component image-with-content-section:
+-- component container-with-title:
 caption title:
 children c:
 
 -- ftd.column:
 width: fill-container
-children: $image-with-content-section.c
+
+-- ftd.text: $container-with-title.title
+role: $inherited.types.heading-large
+color: $colors.text-
+align-self: center
+margin-vertical.px: 100
+
+-- ftd.column:
+width: fill-container
+children: $container-with-title.c
 
 -- end: ftd.column
 
--- end: image-with-content-section
+-- end: ftd.column
+
+-- end: container-with-title
 
 
 
@@ -471,8 +483,9 @@ margin.px: 2
 -- ftd.row:
 
 -- ftd.column:
-margin-vertical.px: 125
-margin-horizontal.px: 125
+margin-vertical.px: 138
+margin-left.px: 165
+margin-right.px: 125
 
 -- ftd.text: $about.title
 role: $inherited.types.heading-large
@@ -495,3 +508,65 @@ src: $about.pic
 
 
 
+
+
+
+
+
+
+
+-- component faq:
+caption heading:
+body body:
+ftd.image-src more: $assets.files.images.add.png
+ftd.image-src close: $assets.files.images.close.png
+boolean $open: false
+
+-- ftd.column:
+align-content: center
+width: fill-container
+margin-bottom.px: 30
+
+-- ftd.column:
+width.fixed.percent: 80
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+border-bottom-width.px: 2
+color: $colors.text-
+
+-- ftd.text: $faq.heading
+role: $inherited.types.heading-small
+color: $colors.text-
+
+-- ftd.image:
+if: { !faq.open }
+height.fixed.px: 24
+width.fixed.px: 24
+src: $faq.more
+$on-click$: $ftd.set-bool($a = $faq.open, v = true)
+
+-- ftd.image:
+if: { faq.open }
+height.fixed.px: 24
+width.fixed.px: 24
+src: $faq.close
+$on-click$: $ftd.set-bool($a = $faq.open, v = false)
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { faq.open }
+
+-- ftd.text: $faq.body
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: faq
