@@ -214,7 +214,7 @@ role: $inherited.types.heading-medium
 color: $inherited.colors.text
 
 -- ftd.text: $hero.title
-role: $inherited.types.heading-large
+role: $inherited.types.heading-hero
 color: $inherited.colors.text
 
 -- ftd.text: $hero.content
@@ -238,4 +238,104 @@ width.fixed.percent: 90
 -- end: ftd.column
 
 -- end: hero
+
+
+
+
+
+
+
+
+
+
+-- component image-with-button:
+ftd.image-src pic:
+caption title:
+body body:
+string text:
+string button:
+string button-url:
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+
+-- ftd.image: 
+src: $image-with-button.pic
+
+-- ftd.column:
+
+-- ftd.text: $image-with-button.title
+
+-- ftd.text: $image-with-button.body
+
+-- ftd.text: $image-with-button.text
+
+-- ftd.text: $image-with-button.button
+link: $image-with-button.button-url
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: image-with-button
+
+
+
+
+
+
+
+
+
+
+-- component countdown-with-info:
+ftd.image-src pic:
+caption title:
+string heading:
+ftd.image-src icon:
+string text:
+string counter:
+string reminder:
+
+
+-- ftd.column:
+width: fill-container
+
+-- ftd.row:
+width: fill-container
+
+-- ftd.image: 
+src: $countdown-with-info.pic
+
+-- ftd.column: 
+
+-- ftd.text: $countdown-with-info.title
+
+-- ftd.text: $countdown-with-info.heading
+
+-- ftd.row:
+
+-- ftd.image:
+src: $countdown-with-info.icon
+
+-- ftd.text: $countdown-with-info.text
+
+-- end: ftd.row
+
+-- ftd.text: $countdown-with-info.counter
+
+-- ftd.text: $countdown-with-info.reminder
+
+-- end: ftd.column
+
+-- end: ftd.row
+
+-- end: ftd.column
+
+-- end: countdown-with-info
+
 
