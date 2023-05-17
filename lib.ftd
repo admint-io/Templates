@@ -122,17 +122,19 @@ padding-horizontal.px: 8
 
 -- ftd.image:
 src: $navbar-mobile.logo
+height.fixed.px: 50
 
 -- ftd.image:
 if: { !navbar-mobile.open }
 align-self: center
 src: $navbar-mobile.menu
+height.fixed.px: 20
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
 
 -- ftd.image:
 if: { navbar-mobile.open }
 align-self: center
-height.fixed.px: 50
+height.fixed.px: 20
 src: $navbar-mobile.close
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
@@ -994,13 +996,15 @@ color: $colors.text-
 -- ftd.image:
 if: { !faq.open }
 height.fixed.px: 24
+align-self: center
 width.fixed.px: 24
 src: $faq.more
 $on-click$: $ftd.set-bool($a = $faq.open, v = true)
 
 -- ftd.image:
 if: { faq.open }
-height.fixed.px: 24
+height.fixed.px: 8
+align-self: center
 width.fixed.px: 24
 src: $faq.less
 $on-click$: $ftd.set-bool($a = $faq.open, v = false)
