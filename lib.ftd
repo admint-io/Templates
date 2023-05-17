@@ -61,43 +61,204 @@ string cta-text-4:
 string cta-text-5:
 string cta-button-1:
 
--- ftd.row:
+-- ftd.column:
+width: fill-container
+
+-- navbar-mobile:
+if: { ftd.device == "mobile" }
+logo: $navbar.logo
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-button-1: $navbar.cta-button-1
+
+-- navbar-desktop:
+if: { ftd.device == "desktop" }
+logo: $navbar.logo
+cta-text-1: $navbar.cta-text-1
+cta-text-2: $navbar.cta-text-2
+cta-text-3: $navbar.cta-text-3
+cta-text-4: $navbar.cta-text-4
+cta-text-5: $navbar.cta-text-5
+cta-button-1: $navbar.cta-button-1
+
+-- end: ftd.column
+
+-- end: navbar
+
+
+
+
+
+
+
+
+
+
+-- component navbar-mobile:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-button-1:
+ftd.image-src menu: $assets.files.images.menu.png
+ftd.image-src close: $assets.files.images.close.png
+boolean $open: false
+
+-- ftd.column:
 width: fill-container
 height: hug-content
 margin-vertical.px: 8
 
+-- ftd.row:
+width: fill-container
+spacing: space-between
+padding-horizontal.px: 8
+
 -- ftd.image:
-src: $navbar.logo
-margin-left.px: 78
+src: $navbar-mobile.logo
+
+-- ftd.image:
+if: { !navbar-mobile.open }
+align-self: center
+src: $navbar-mobile.menu
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
+
+-- ftd.image:
+if: { navbar-mobile.open }
+align-self: center
+height.fixed.px: 50
+src: $navbar-mobile.close
+$on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
+
+-- end: ftd.row
+
+-- ftd.column:
+if: { navbar-mobile.open}
+width: fill-container
+margin-vertical.px: 10
+spacing.fixed.px: 10
+
+-- ftd.text: $navbar-mobile.cta-text-1
+role: $inherited.types.label-large
+text-align: center
+margin-horizontal.px: 32
+color: $colors.cta-tertiary-base-
+
+-- ftd.text: $navbar-mobile.cta-text-2
+role: $inherited.types.label-large
+text-align: center
+margin-horizontal.px: 32
+color: $colors.cta-tertiary-base-
+
+-- ftd.text: $navbar-mobile.cta-text-3
+role: $inherited.types.label-large
+text-align: center
+margin-horizontal.px: 32
+color: $colors.cta-tertiary-base-
+
+-- ftd.text: $navbar-mobile.cta-text-4
+role: $inherited.types.label-large
+text-align: center
+margin-horizontal.px: 32
+color: $colors.cta-tertiary-base-
+
+-- ftd.text: $navbar-mobile.cta-text-5
+role: $inherited.types.label-large
+text-align: center
+margin-horizontal.px: 32
+color: $colors.cta-tertiary-base-
+
+-- ftd.column:
+width: fill-container
+align-content: center
+align-self: center
+
+-- ftd.text: $navbar-mobile.cta-button-1
+role: $inherited.types.label-large
+style: bold
+text-align: center
+padding-vertical.px: 12
+padding-horizontal.px: 32
+border-width.px: 2
+border-radius.px: 4
+background.solid: $colors.accent-primary-
+border-color: $colors.accent-secondary-
+color: $colors.text-
+link: /
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: navbar-mobile
+
+
+
+
+
+
+
+
+
+
+-- component navbar-desktop:
+ftd.image-src logo:
+string cta-text-1:
+string cta-text-2:
+string cta-text-3:
+string cta-text-4:
+string cta-text-5:
+string cta-button-1:
 
 -- ftd.row:
-margin-vertical.px: 33
+width: fill-container
+height: hug-content
+margin-vertical.px: 8
+padding-horizontal.px: 50
 
--- ftd.text: $navbar.cta-text-1
+-- ftd.image:
+src: $navbar-desktop.logo
+align-self: center
+
+-- ftd.row:
+width: fill-container
+spacing: space-between
+
+-- ftd.row:
+align-self: center
+
+-- ftd.text: $navbar-desktop.cta-text-1
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
 color: $colors.cta-tertiary-base-
 
--- ftd.text: $navbar.cta-text-2
+-- ftd.text: $navbar-desktop.cta-text-2
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
 color: $colors.cta-tertiary-base-
 
--- ftd.text: $navbar.cta-text-3
+-- ftd.text: $navbar-desktop.cta-text-3
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
 color: $colors.cta-tertiary-base-
 
--- ftd.text: $navbar.cta-text-4
+-- ftd.text: $navbar-desktop.cta-text-4
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
 color: $colors.cta-tertiary-base-
 
--- ftd.text: $navbar.cta-text-5
+-- ftd.text: $navbar-desktop.cta-text-5
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
@@ -106,10 +267,9 @@ color: $colors.cta-tertiary-base-
 -- end: ftd.row
 
 -- ftd.row:
-margin-left.px: 478
 margin-vertical.px: 29
 
--- ftd.text: $navbar.cta-button-1
+-- ftd.text: $navbar-desktop.cta-button-1
 $on-click$: $funct.connectWallet()
 role: $inherited.types.label-large
 style: bold
@@ -126,8 +286,9 @@ color: $colors.text-
 
 -- end: ftd.row
 
--- end: navbar
+-- end: ftd.row
 
+-- end: navbar-desktop
 
 
 
@@ -536,7 +697,7 @@ src: $about.pic
 caption heading:
 body body:
 ftd.image-src more: $assets.files.images.add.png
-ftd.image-src close: $assets.files.images.close.png
+ftd.image-src less: $assets.files.images.less.png
 boolean $open: false
 
 -- ftd.column:
@@ -569,7 +730,7 @@ $on-click$: $ftd.set-bool($a = $faq.open, v = true)
 if: { faq.open }
 height.fixed.px: 24
 width.fixed.px: 24
-src: $faq.close
+src: $faq.less
 $on-click$: $ftd.set-bool($a = $faq.open, v = false)
 
 -- end: ftd.row
