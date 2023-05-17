@@ -504,7 +504,6 @@ border-radius.px: 6
 border-color: $colors.accent-primary-
 role: $inherited.types.copy-regular
 color: $colors.text-
-link: $image-with-button.button-url
 
 -- end: ftd.column
 
