@@ -374,7 +374,7 @@ if: { ftd.device == "mobile" }
 
 -- ftd.column:
 margin-horizontal.px: 33
-width.fixed.percent: 80
+width.fixed.percent: 50
 
 -- ftd.text: $hero.heading
 role: $inherited.types.heading-large
@@ -383,11 +383,11 @@ margin-bottom.px: 20
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
-css: [ $assets.files.gradient.css ]
-classes: color-2
+color: $colors.accent-primary-
 
 -- ftd.text: $hero.content
-margin-vertical.px: 24
+margin-top.px: 24
+margin-bottom.px: 24
 role: $inherited.types.copy-large
 color: $colors.text-
 
@@ -395,7 +395,7 @@ color: $colors.text-
 
 -- ftd.image:
 src: $hero.cover
-width.fixed.percent: 90
+width.fixed.percent: 80
 align-self: center
 
 -- end: ftd.column
@@ -459,7 +459,7 @@ margin-vertical.px: 150
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
-margin-horizontal.px: 10
+margin-horizontal.px: 44
 spacing.fixed.px: 55
 
 -- ftd.image: 
@@ -605,7 +605,7 @@ margin-vertical.px: 32
 
 -- ftd.image: 
 src: $countdown-with-info.pic
-width.fixed.percent: 90
+width.fixed.percent: 80
 align-self: center
 
 -- ftd.column: 
@@ -618,8 +618,7 @@ margin-bottom.px: 20
 
 -- ftd.text: $countdown-with-info.heading
 role: $inherited.types.heading-medium
-css: [ $assets.files.gradient.css ]
-classes: color-2
+color: $colors.accent-primary-
 margin-bottom.px: 20
 
 -- ftd.row:
@@ -773,7 +772,7 @@ margin-horizontal.px: 20
 
 -- ftd.image:
 src: $image-with-content-mobile.pic
-width.fixed.percent: 90
+width.fixed.percent: 80
 align-self: center
 
 -- ftd.column:
@@ -788,8 +787,7 @@ margin-horizontal.px: 20
 -- ftd.text: $image-with-content-mobile.title
 align-self: center
 role: $inherited.types.heading-medium
-css: [ $assets.files.gradient.css ]
-classes: color-2
+color: $colors.accent-primary-
 margin-bottom.px: 38
 
 -- ftd.text: $image-with-content-mobile.body
@@ -925,7 +923,7 @@ color: $colors.text-
 
 -- ftd.image:
 src: $about.pic
-width.fixed.percent: 90
+width.fixed.percent: 80
 align-self: center
 
 -- end: ftd.column
