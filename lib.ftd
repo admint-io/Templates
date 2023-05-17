@@ -122,17 +122,19 @@ padding-horizontal.px: 8
 
 -- ftd.image:
 src: $navbar-mobile.logo
+height.fixed.px: 50
 
 -- ftd.image:
 if: { !navbar-mobile.open }
 align-self: center
 src: $navbar-mobile.menu
+height.fixed.px: 20
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = true)
 
 -- ftd.image:
 if: { navbar-mobile.open }
 align-self: center
-height.fixed.px: 50
+height.fixed.px: 20
 src: $navbar-mobile.close
 $on-click$: $ftd.set-bool($a = $navbar-mobile.open, v = false)
 
@@ -185,10 +187,8 @@ style: bold
 text-align: center
 padding-vertical.px: 12
 padding-horizontal.px: 32
-border-width.px: 2
 border-radius.px: 4
-background.solid: $colors.accent-primary-
-border-color: $colors.accent-secondary-
+background.linear-gradient: $lg
 color: $colors.text-
 link: /
 
@@ -277,10 +277,8 @@ style: bold
 text-align: center
 padding-vertical.px: 12
 padding-horizontal.px: 32
-border-width.px: 2
 border-radius.px: 4
-background.solid: $colors.accent-primary-
-border-color: $colors.accent-secondary-
+background.linear-gradient: $lg
 color: $colors.text-
 
 -- end: ftd.row
@@ -316,7 +314,7 @@ width: fill-container
 margin-vertical.px: 100
 
 -- ftd.row:
-width.fixed.percent: 80
+width.fixed.percent: 90
 align-self: center
 align-content: center
 spacing.fixed.px: 24
@@ -417,7 +415,8 @@ margin-bottom.px: 20
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 
 -- ftd.text: $hero.content
 margin-top.px: 24
@@ -673,7 +672,8 @@ margin-bottom.px: 40
 
 -- ftd.text: $countdown-with-info.heading
 role: $inherited.types.heading-medium
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 margin-bottom.px: 40
 
 -- ftd.row:
@@ -841,7 +841,8 @@ color: $colors.text-
 -- ftd.text: $image-with-content-desktop.title
 align-self: center
 role: $inherited.types.heading-medium
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 margin-bottom.px: 38
 
 -- ftd.text: $image-with-content-desktop.body
@@ -993,13 +994,15 @@ color: $colors.text-
 -- ftd.image:
 if: { !faq.open }
 height.fixed.px: 24
+align-self: center
 width.fixed.px: 24
 src: $faq.more
 $on-click$: $ftd.set-bool($a = $faq.open, v = true)
 
 -- ftd.image:
 if: { faq.open }
-height.fixed.px: 24
+height.fixed.px: 8
+align-self: center
 width.fixed.px: 24
 src: $faq.less
 $on-click$: $ftd.set-bool($a = $faq.open, v = false)
@@ -1040,7 +1043,7 @@ boolean $open: true
 -- ftd.row:
 if: { banner.open }
 width: fill-container
-background.solid: $colors.accent-primary-
+background.linear-gradient: $lg
 padding.px: 20
 spacing: space-between
 
@@ -1065,3 +1068,24 @@ $on-click$: $ftd.set-bool($a = $banner.open, v = false)
 -- end: ftd.row
 
 -- end: banner
+
+
+
+
+
+
+
+
+
+
+-- ftd.linear-gradient lg:
+direction: bottom-left
+colors: $color-values-2
+
+-- ftd.linear-gradient-color list color-values-2:
+
+-- ftd.linear-gradient-color: #6F59E9
+
+-- ftd.linear-gradient-color: #D12EEF
+
+-- end: color-values-2
