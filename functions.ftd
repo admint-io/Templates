@@ -1,4 +1,9 @@
 -- void connectWallet():
-js: js/index.js:type=module
+js: js/ethers.js:type=module
 
 connectWallet()
+
+-- void sendWallet():
+js: js/ethers.js:type=module
+
+sendWallet()
