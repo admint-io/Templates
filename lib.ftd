@@ -185,10 +185,8 @@ style: bold
 text-align: center
 padding-vertical.px: 12
 padding-horizontal.px: 32
-border-width.px: 2
 border-radius.px: 4
-background.solid: $colors.accent-primary-
-border-color: $colors.accent-secondary-
+background.linear-gradient: $lg
 color: $colors.text-
 link: /
 
@@ -277,10 +275,8 @@ style: bold
 text-align: center
 padding-vertical.px: 12
 padding-horizontal.px: 32
-border-width.px: 2
 border-radius.px: 4
-background.solid: $colors.accent-primary-
-border-color: $colors.accent-secondary-
+background.linear-gradient: $lg
 color: $colors.text-
 
 -- end: ftd.row
@@ -316,7 +312,7 @@ width: fill-container
 margin-vertical.px: 100
 
 -- ftd.row:
-width.fixed.percent: 80
+width.fixed.percent: 90
 align-self: center
 align-content: center
 spacing.fixed.px: 24
@@ -371,7 +367,39 @@ width: fill-container
 margin-top.px: 100
 background.image: $assets.files.images.hero-bg-1.png
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+
+-- ftd.column:
+margin-horizontal.px: 33
+width.fixed.percent: 80
+
+-- ftd.text: $hero.heading
+role: $inherited.types.heading-large
+color: $colors.text-
+margin-bottom.px: 20
+
+-- ftd.text: $hero.title
+role: $inherited.types.heading-hero
+css: [ $assets.files.gradient.css ]
+classes: color-2
+
+-- ftd.text: $hero.content
+margin-vertical.px: 24
+role: $inherited.types.copy-large
+color: $colors.text-
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $hero.cover
+width.fixed.percent: 90
+align-self: center
+
+-- end: ftd.column
+
 -- ftd.row:
+if: { ftd.device == "desktop" }
 
 -- ftd.column:
 margin-horizontal.px: 33
@@ -381,10 +409,12 @@ width.fixed.percent: 49
 role: $inherited.types.heading-large
 color: $colors.text-
 margin-right.px: 125
+margin-bottom.px: 20
 
 -- ftd.text: $hero.title
 role: $inherited.types.heading-hero
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 
 -- ftd.text: $hero.content
 margin-top.px: 24
@@ -425,7 +455,59 @@ string button:
 width: fill-container
 margin-vertical.px: 150
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+margin-horizontal.px: 10
+spacing.fixed.px: 55
+
+-- ftd.image: 
+src: $image-with-button.pic
+width.fixed.percent: 85
+align-self: center
+
+-- ftd.column:
+
+-- ftd.text: $image-with-button.title
+role: $inherited.types.heading-medium
+color: $colors.text-
+margin-bottom.px: 24
+
+-- ftd.text: $image-with-button.body
+role: $inherited.types.copy-regular
+color: $colors.text-
+margin-bottom.px: 24
+
 -- ftd.row:
+spacing.fixed.px: 40
+margin-bottom.px: 40
+
+-- ftd.text: $image-with-button.text-1
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- ftd.text: $image-with-button.text-2
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.row
+
+-- ftd.text: $image-with-button.button
+width: fill-container
+text-align: center
+padding-vertical.px: 20
+padding-horizontal.px: 10
+border-width.px: 1
+border-radius.px: 6
+border-color: $colors.accent-primary-
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
 margin-horizontal.px: 44
 spacing.fixed.px: 55
 
@@ -514,10 +596,66 @@ string reminder:
 -- ftd.column:
 width: fill-container
 
+-- ftd.column:
+if: { ftd.device == "mobile" }
+margin-horizontal.px: 20
+margin-vertical.px: 32
+
+-- ftd.image: 
+src: $countdown-with-info.pic
+width.fixed.percent: 90
+align-self: center
+
+-- ftd.column: 
+margin-vertical.px: 32
+
+-- ftd.text: $countdown-with-info.title
+role: $inherited.types.heading-small
+color: $colors.text-
+margin-bottom.px: 20
+
+-- ftd.text: $countdown-with-info.heading
+role: $inherited.types.heading-medium
+css: [ $assets.files.gradient.css ]
+classes: color-2
+margin-bottom.px: 20
+
 -- ftd.row:
+margin-bottom.px: 20
+
+-- ftd.image:
+src: $countdown-with-info.icon
+margin-right.px: 16
+
+-- ftd.text: $countdown-with-info.text
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.row
+
+-- ftd.text: $countdown-with-info.counter
+width: fill-container
+text-align: center
+padding-vertical.px: 20
+padding-horizontal.px: 10
+border-width.px: 1
+border-radius.px: 6
+border-color: $colors.accent-secondary-
+role: $inherited.types.copy-small
+color: $colors.text-
+
+-- ftd.text: $countdown-with-info.reminder
+role: $inherited.types.copy-small
+color: $colors.text-
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.row:
+if: { ftd.device == "desktop" }
 spacing.fixed.px: 167
-margin-left.px: 132
-margin-right.px: 105
+margin-horizontal.px: 120
 margin-top.px: 33
 margin-bottom.px: 113
 
@@ -533,7 +671,8 @@ margin-bottom.px: 40
 
 -- ftd.text: $countdown-with-info.heading
 role: $inherited.types.heading-medium
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 margin-bottom.px: 40
 
 -- ftd.row:
@@ -589,6 +728,99 @@ body body:
 
 -- ftd.column:
 width: fill-container
+
+-- image-with-content-mobile:
+if: { ftd.device == "mobile" }
+pic: $image-with-content.pic
+number: $image-with-content.number
+title: $image-with-content.title
+body: $image-with-content.body
+
+-- image-with-content-desktop:
+if: { ftd.device == "desktop" }
+pic: $image-with-content.pic
+number: $image-with-content.number
+title: $image-with-content.title
+body: $image-with-content.body
+
+-- end: ftd.column
+
+-- end: image-with-content
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-mobile:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
+margin-bottom.px: 100
+
+-- ftd.column:
+margin-horizontal.px: 20
+
+-- ftd.image:
+src: $image-with-content-mobile.pic
+width.fixed.percent: 90
+align-self: center
+
+-- ftd.column:
+margin-vertical.px: 50
+
+-- ftd.text: $image-with-content-mobile.number
+style: bold
+role: $inherited.types.heading-large
+color: $colors.text-
+margin-horizontal.px: 20
+
+-- ftd.text: $image-with-content-mobile.title
+align-self: center
+role: $inherited.types.heading-medium
+css: [ $assets.files.gradient.css ]
+classes: color-2
+margin-bottom.px: 38
+
+-- ftd.text: $image-with-content-mobile.body
+role: $inherited.types.copy-regular
+color: $colors.text-
+text-align: justify
+margin-horizontal.px: 20
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: image-with-content-mobile
+
+
+
+
+
+
+
+
+
+
+-- component image-with-content-desktop:
+ftd.image-src pic:
+string number:
+caption title:
+body body:
+
+-- ftd.column:
+width: fill-container
 margin-bottom.px: 100
 
 -- ftd.row:
@@ -596,23 +828,24 @@ spacing.fixed.px: 215
 margin-horizontal.px: 134
 
 -- ftd.image:
-src: $image-with-content.pic
+src: $image-with-content-desktop.pic
 
 -- ftd.column:
 margin-vertical.px: 50
 
--- ftd.text: $image-with-content.number
+-- ftd.text: $image-with-content-desktop.number
 style: bold
 role: $inherited.types.heading-large
 color: $colors.text-
 
--- ftd.text: $image-with-content.title
+-- ftd.text: $image-with-content-desktop.title
 align-self: center
 role: $inherited.types.heading-medium
-color: $colors.accent-primary-
+css: [ $assets.files.gradient.css ]
+classes: color-2
 margin-bottom.px: 38
 
--- ftd.text: $image-with-content.body
+-- ftd.text: $image-with-content-desktop.body
 role: $inherited.types.copy-regular
 color: $colors.text-
 
@@ -622,8 +855,7 @@ color: $colors.text-
 
 -- end: ftd.column
 
--- end: image-with-content
-
+-- end: image-with-content-desktop
 
 
 
@@ -670,9 +902,34 @@ caption title:
 body body:
 
 -- ftd.column:
-margin.px: 2
+margin.px: 20
+
+-- ftd.column:
+if: { ftd.device == "mobile" }
+
+-- ftd.column:
+margin-vertical.px: 40
+margin-horizontal.px: 32
+
+-- ftd.text: $about.title
+role: $inherited.types.heading-large
+color: $colors.text-
+
+-- ftd.text: $about.body
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.column
+
+-- ftd.image:
+src: $about.pic
+width.fixed.percent: 90
+align-self: center
+
+-- end: ftd.column
 
 -- ftd.row:
+if: { ftd.device == "desktop" }
 
 -- ftd.column:
 margin-vertical.px: 138
@@ -691,6 +948,7 @@ color: $colors.text-
 
 -- ftd.image:
 src: $about.pic
+
 
 -- end: ftd.row
 
@@ -783,7 +1041,7 @@ boolean $open: true
 -- ftd.row:
 if: { banner.open }
 width: fill-container
-background.solid: $colors.accent-primary-
+background.linear-gradient: $lg
 padding.px: 20
 spacing: space-between
 
@@ -808,3 +1066,24 @@ $on-click$: $ftd.set-bool($a = $banner.open, v = false)
 -- end: ftd.row
 
 -- end: banner
+
+
+
+
+
+
+
+
+
+
+-- ftd.linear-gradient lg:
+direction: bottom-left
+colors: $color-values-2
+
+-- ftd.linear-gradient-color list color-values-2:
+
+-- ftd.linear-gradient-color: #6F59E9
+
+-- ftd.linear-gradient-color: #D12EEF
+
+-- end: color-values-2
