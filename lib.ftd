@@ -2,6 +2,7 @@
 -- import: admint-io.github.io/Templates/colors as colors
 -- import: sarvom.github.io/holy-angel-typography 
 -- import: admint-io.github.io/Templates/functions as funct
+-- import: admint-io.github.io/Templates/texts as texts
 
 -- component page:
 ftd.image-src logo: $assets.files.images.logo.png
@@ -10,7 +11,7 @@ string cta-text-2: POAP
 string cta-text-3: How To Claim
 string cta-text-4: About Us
 string cta-text-5: FAQs
-string cta-button-1: Connect Wallet
+string cta-button-1: $texts.wallet-state
 children c:
 
 -- ftd.column:
@@ -360,7 +361,7 @@ color: $colors.text-
 
 
 -- component hero:
-ftd.image-src cover:
+string cover:
 caption title:
 string heading:
 body content:
@@ -412,13 +413,13 @@ src: $hero.cover
 
 
 -- component image-with-button:
-ftd.image-src pic:
+string pic:
 caption title:
 body body:
 string text-1:
 string text-2:
+string val-2:
 string button:
-string button-url:
 
 -- ftd.column:
 width: fill-container
@@ -429,6 +430,9 @@ margin-horizontal.px: 44
 spacing.fixed.px: 55
 
 -- ftd.image: 
+width.fixed.px: 544
+height.fixed.px: 765
+border-radius.px: 40
 src: $image-with-button.pic
 
 -- ftd.column:
@@ -452,9 +456,19 @@ margin-bottom.px: 40
 role: $inherited.types.copy-regular
 color: $colors.text-
 
+-- ftd.row:
+spacing.fixed.px: 20
+margin-bottom.px: 40
+
 -- ftd.text: $image-with-button.text-2
 role: $inherited.types.copy-regular
 color: $colors.text-
+
+-- ftd.text: $image-with-button.val-2
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.row
 
 -- end: ftd.row
 
@@ -468,7 +482,7 @@ border-radius.px: 6
 border-color: $colors.accent-primary-
 role: $inherited.types.copy-regular
 color: $colors.text-
-link: $image-with-button.button-url
+$on-click$: $funct.sendWallet()
 
 -- end: ftd.column
 
