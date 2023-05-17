@@ -389,7 +389,7 @@ window.onload = async function () {
     );
     
     console.log("cname is ",cName);
-    console.log("invite id is ",inviteId);
+    console.log("invite id is ",inviteCode);
       
     fetchUiComponents(domainName).then((result)=>{
         if("colorSchemeUrl" in result.values[0]){
