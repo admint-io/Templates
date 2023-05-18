@@ -452,6 +452,7 @@ caption title:
 body body:
 string text-1:
 string text-2:
+string val-1:
 string val-2:
 string button:
 
@@ -481,15 +482,35 @@ margin-bottom.px: 24
 spacing.fixed.px: 40
 margin-bottom.px: 40
 
+-- ftd.column:
+spacing.fixed.px: 20
+margin-bottom.px: 40
+
 -- ftd.text: $image-with-button.text-1
 role: $inherited.types.copy-regular
 color: $colors.text-
 opacity: 0.7
 
+-- ftd.text: $image-with-button.val-1
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.column
+
+-- ftd.column:
+spacing.fixed.px: 20
+margin-bottom.px: 40
+
 -- ftd.text: $image-with-button.text-2
 role: $inherited.types.copy-regular
 color: $colors.text-
 opacity: 0.7
+
+-- ftd.text: $image-with-button.val-2
+role: $inherited.types.copy-regular
+color: $colors.text-
+
+-- end: ftd.column
 
 -- end: ftd.row
 
@@ -510,6 +531,7 @@ $on-click$: $funct.sendWallet()
 -- ftd.image: 
 src: $image-with-button.pic
 width: fill-container
+border-radius.px: 20
 align-self: center
 
 -- end: ftd.column
