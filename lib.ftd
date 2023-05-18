@@ -150,31 +150,31 @@ spacing.fixed.px: 10
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-mobile.cta-text-2
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-mobile.cta-text-3
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-mobile.cta-text-4
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-mobile.cta-text-5
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.column:
 width: fill-container
@@ -239,31 +239,31 @@ align-self: center
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-desktop.cta-text-2
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-desktop.cta-text-3
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-desktop.cta-text-4
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- ftd.text: $navbar-desktop.cta-text-5
 role: $inherited.types.label-large
 text-align: center
 margin-horizontal.px: 32
-color: $colors.cta-tertiary-base-
+color: $colors.text-
 
 -- end: ftd.row
 
@@ -388,8 +388,9 @@ classes: color-2
 
 -- ftd.text: $hero.content
 margin-vertical.px: 24
-role: $inherited.types.copy-large
+role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.column
 
@@ -424,6 +425,7 @@ margin-top.px: 24
 margin-bottom.px: 48
 role: $inherited.types.copy-large
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.column
 
@@ -535,6 +537,7 @@ margin-bottom.px: 24
 role: $inherited.types.copy-regular
 color: $colors.text-
 margin-bottom.px: 24
+opacity: 0.7
 
 -- ftd.row:
 spacing.fixed.px: 40
@@ -543,6 +546,7 @@ margin-bottom.px: 40
 -- ftd.text: $image-with-button.text-1
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- ftd.row:
 spacing.fixed.px: 20
@@ -551,6 +555,7 @@ margin-bottom.px: 40
 -- ftd.text: $image-with-button.text-2
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- ftd.text: $image-with-button.val-2
 role: $inherited.types.copy-regular
@@ -631,6 +636,7 @@ margin-right.px: 16
 -- ftd.text: $countdown-with-info.text
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.row
 
@@ -691,6 +697,7 @@ margin-right.px: 16
 -- ftd.text: $countdown-with-info.text
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.row
 
@@ -799,6 +806,7 @@ margin-bottom.px: 38
 -- ftd.text: $image-with-content-mobile.body
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 text-align: justify
 margin-horizontal.px: 20
 
@@ -854,6 +862,7 @@ margin-bottom.px: 38
 -- ftd.text: $image-with-content-desktop.body
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.column
 
@@ -924,6 +933,7 @@ color: $colors.text-
 -- ftd.text: $about.body
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.column
 
@@ -949,6 +959,7 @@ color: $colors.text-
 -- ftd.text: $about.body
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.column
 
