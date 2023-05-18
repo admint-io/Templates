@@ -377,7 +377,7 @@ width: fill-container
 padding-horizontal.px: 20
 
 -- ftd.text: $hero.heading
-role: $inherited.types.heading-large
+role: $inherited.types.heading-medium
 color: $colors.text-
 margin-bottom.px: 20
 
