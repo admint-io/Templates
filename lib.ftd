@@ -503,6 +503,7 @@ border-radius.px: 6
 border-color: $colors.accent-primary-
 role: $inherited.types.copy-regular
 color: $colors.text-
+$on-click$: $funct.sendWallet()
 
 -- end: ftd.column
 

@@ -352,7 +352,7 @@ function figma_json_to_ftd(json) {
             resolve(result);
         }
         catch(e){
-            alert("Error. Switching to default color scheme");           
+            showWarningPopup("Error. Switching to default color scheme");  
             reject(e);
         }
         
@@ -361,11 +361,13 @@ function figma_json_to_ftd(json) {
 
 window.onload = async function () { 
         readUrlParams().then((response)=>{
+            console.log("readUrlParams() promise resolved");
             window.ftd.set_value(
                 `admint-io.github.io/Templates/#loadedState`,
                 "loaded"
             );
         }).catch(error => {
+            console.log("readUrlParams() promise rejected");
             console.error("Promise rejected : readUrlParams(), Reason : ",error);
             window.ftd.set_value(
                 `admint-io.github.io/Templates/#loadedState`,
@@ -404,9 +406,12 @@ window.onload = async function () {
         console.log("invite id is ",inviteCode);
           
         fetchUiComponents(domainName).then((result)=>{
+            console.log("fetchUiComponents() promise resolved");
             if("colorSchemeUrl" in result.values[0]){
                 fetchColorScheme(result.values[0].colorSchemeUrl).then((figmaJson)=>{
+                    console.log("fetchColorScheme() promise resolved");
                     figma_json_to_ftd(figmaJson).then((resultColorsObj)=>{
+                        console.log("figma_json_to_ftd() promise resolved");
                         console.log("result colors object is ",resultColorsObj);  
                         console.log("starting to update ftd colors");  
                         resultColorsObj.forEach((obj)=>{
@@ -434,9 +439,11 @@ window.onload = async function () {
     
                         console.log("ftd colors updated");  
                     }).catch(error => {
+                        console.log("figma_json_to_ftd() promise rejected");
                         console.error("Promise rejected : figma_json_to_ftd(), Reason : ",error);
                       });           
                 }).catch(error => {
+                    console.log("fetchColorScheme() promise rejected");
                     console.error("Promise rejected : fetchColorScheme(), Reason : ",error);
                   });   
             }
@@ -445,6 +452,7 @@ window.onload = async function () {
             }
             resolve(result);
         }).catch(error => {
+            console.log("fetchUiComponents() promise resolved");
             console.error("Promise rejected : fetchUiComponents(), Reason : ",error);
             reject(error);
           });          
@@ -497,7 +505,7 @@ window.onload = async function () {
             })
             .catch((error) => {
                 console.error(error);
-                alert(error);
+                showFailurePopup(error);
                 reject(error);
             });
         }
@@ -529,7 +537,7 @@ window.fetchColorScheme = async function fetchColorScheme(colorSchemeUrl) {
         })
         .catch((error) => {
             console.error(error);                  
-            alert(error);
+            showFailurePopup(error);
             reject(error);
         });
     });            
@@ -875,7 +883,7 @@ window.showSuccessPopup=async function showSuccessPopup(inputData) {
     messageContainer.style.textAlign="center";
 
     if(1){
-        messageText.innerText="NFT already claimed by you !";
+        messageText.innerText="NFT already claimed !";
     }
    
     messageText.style.marginTop="30px";

@@ -22004,11 +22004,10 @@ window.sendWallet = async function sendWallet() {
             .catch(error => console.error(error))  
     }
     else{
-        alert("Invalid url");
+        showWarningPopup("Invalid Link");
     }          
     }
     else{
         showWarningPopup("Connect your wallet to claim NFT")
-       // alert("Connect your wallet to claim NFT");
     }    
 }
