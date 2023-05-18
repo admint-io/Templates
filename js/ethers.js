@@ -21991,12 +21991,12 @@ window.sendWallet = async function sendWallet() {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                if("success" in data){
+                if("success" in data && "message" in data){
                     if(data.success){
-                        showSuccessPopup(data);
+                        showSuccessPopup(data.message);
                     }
                     else{
-                        showFailurePopup(data);
+                        showFailurePopup(data.message);
                     }
                     
                 }
