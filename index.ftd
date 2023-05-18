@@ -4,7 +4,13 @@
 -- import: admint-io.github.io/Templates/texts as texts
 -- import: admint-io.github.io/Templates/functions as funct
 
+-- string $loadedState: loading 
+
+-- lib.loader:
+if: { $loadedState == "loading" }
+
 -- lib.page:
+if: { $loadedState == "loaded" }
 
 -- lib.hero: Cyber Education
 heading: Building a resilient future through
