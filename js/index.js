@@ -883,7 +883,7 @@ window.showSuccessPopup=async function showSuccessPopup(inputData) {
     messageContainer.style.textAlign="center";
 
     if(1){
-        messageText.innerText="NFT already claimed !";
+        messageText.innerText=inputData;
     }
    
     messageText.style.marginTop="30px";
