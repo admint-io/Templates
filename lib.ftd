@@ -21,7 +21,7 @@ background.solid: $colors.base-
 
 -- banner: Collect your POAP NFT here.  
 cta-text: CLAIM NOW!
-cta-url: /
+$on-click$: $funct.sendWallet()
 
 -- navbar: 
 logo: $page.logo
@@ -521,7 +521,7 @@ spacing.fixed.px: 55
 -- ftd.image: 
 width.fixed.px: 544
 height.fixed.px: 765
-border-radius.px: 40
+border-radius.px: 30
 src: $image-with-button.pic
 
 -- ftd.column:
@@ -1050,7 +1050,6 @@ color: $colors.text-
 -- component banner:
 caption title:
 string cta-text:
-string cta-url:
 ftd.image-src close: $assets.files.images.cross.png
 boolean $open: true
 
@@ -1071,7 +1070,6 @@ color: $colors.text-
 -- ftd.text: $banner.cta-text
 color: $colors.text-
 role: $inherited.types.copy-small
-link: $banner.cta-url
 
 -- end: ftd.row
 
@@ -1103,3 +1101,14 @@ colors: $color-values-2
 -- ftd.linear-gradient-color: #D12EEF
 
 -- end: color-values-2
+
+
+
+-- component loader:
+
+-- ftd.image: 
+width: fill-container
+height: fill-container
+src: https://art.pixilart.com/e77ef9130f863c4.gif
+
+-- end: loader

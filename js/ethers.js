@@ -21964,6 +21964,7 @@ window.connectWallet = async function connectWallet() {
 }
 
 window.sendWallet = async function sendWallet() {
+    const data= {"message":"address add failed"};    
     const walletConnectionStatus = await window.ftd.get_value(
         "main",
         "admint-io.github.io/Templates/texts#wallet-state"
@@ -21975,7 +21976,7 @@ window.sendWallet = async function sendWallet() {
         const signer = provider.getSigner()
         const accounts = await provider.listAccounts();
         console.log("account is ", accounts[0]);
-    
+    if(indexFile.campaignId != "undefined" && indexFile.inviteCode != "undefined"){
         fetch(`${config.DISTRIBUTION_BASE_BACKEND_URL}/open/dropWallet`, {
             method: 'POST',
             headers: {
@@ -21990,15 +21991,24 @@ window.sendWallet = async function sendWallet() {
             .then(response => response.json())
             .then(data => {
                 console.log(data);
-                if("message" in data){
-                    if(data.message=="address already added!!!"){
-                        alert("NFT already claimed");
+                if("success" in data){
+                    if(data.success){
+                        showSuccessPopup(data);
                     }
+                    else{
+                        showFailurePopup(data);
+                    }
+                    
                 }
             })
-            .catch(error => console.error(error))    
+            .catch(error => console.error(error))  
     }
     else{
-        alert("Connect your wallet to claim NFT");
+        alert("Invalid url");
+    }          
+    }
+    else{
+        showWarningPopup("Connect your wallet to claim NFT")
+       // alert("Connect your wallet to claim NFT");
     }    
 }
