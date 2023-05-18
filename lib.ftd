@@ -373,8 +373,8 @@ background.image: $assets.files.images.hero-bg-1.png
 if: { ftd.device == "mobile" }
 
 -- ftd.column:
-margin-horizontal.px: 20
 width: fill-container
+padding-horizontal.px: 20
 
 -- ftd.text: $hero.heading
 role: $inherited.types.heading-large
@@ -397,6 +397,7 @@ color: $colors.text-
 src: $hero.cover
 width: fill-container
 align-self: center
+padding-horizontal.px: 20
 
 -- end: ftd.column
 
@@ -907,6 +908,7 @@ caption title:
 body body:
 
 -- ftd.column:
+padding-horizontal.px: 10
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
