@@ -190,7 +190,7 @@ padding-horizontal.px: 32
 border-radius.px: 4
 background.linear-gradient: $lg
 color: $colors.text-
-link: /
+$on-click$: $funct.connectWallet()
 
 -- end: ftd.column
 
