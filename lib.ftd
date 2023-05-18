@@ -182,7 +182,7 @@ align-content: center
 align-self: center
 
 -- ftd.text: $navbar-mobile.cta-button-1
-role: $inherited.types.label-large
+role: $inherited.types.button-large
 style: bold
 text-align: center
 padding-vertical.px: 12
@@ -373,8 +373,8 @@ background.image: $assets.files.images.hero-bg-1.png
 if: { ftd.device == "mobile" }
 
 -- ftd.column:
-margin-horizontal.px: 33
-width.fixed.percent: 80
+margin-horizontal.px: 20
+width: fill-container
 
 -- ftd.text: $hero.heading
 role: $inherited.types.heading-large
@@ -395,7 +395,7 @@ color: $colors.text-
 
 -- ftd.image:
 src: $hero.cover
-width.fixed.percent: 90
+width: fill-container
 align-self: center
 
 -- end: ftd.column
@@ -405,7 +405,7 @@ if: { ftd.device == "desktop" }
 
 -- ftd.column:
 margin-horizontal.px: 33
-width.fixed.percent: 49
+width.fixed.percent: 50
 
 -- ftd.text: $hero.heading
 role: $inherited.types.heading-large
@@ -462,11 +462,6 @@ if: { ftd.device == "mobile" }
 margin-horizontal.px: 10
 spacing.fixed.px: 55
 
--- ftd.image: 
-src: $image-with-button.pic
-width.fixed.percent: 85
-align-self: center
-
 -- ftd.column:
 
 -- ftd.text: $image-with-button.title
@@ -477,6 +472,7 @@ margin-bottom.px: 24
 -- ftd.text: $image-with-button.body
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 margin-bottom.px: 24
 
 -- ftd.row:
@@ -486,10 +482,12 @@ margin-bottom.px: 40
 -- ftd.text: $image-with-button.text-1
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- ftd.text: $image-with-button.text-2
 role: $inherited.types.copy-regular
 color: $colors.text-
+opacity: 0.7
 
 -- end: ftd.row
 
@@ -505,6 +503,11 @@ role: $inherited.types.copy-regular
 color: $colors.text-
 
 -- end: ftd.column
+
+-- ftd.image: 
+src: $image-with-button.pic
+width: fill-container
+align-self: center
 
 -- end: ftd.column
 
@@ -603,11 +606,6 @@ if: { ftd.device == "mobile" }
 margin-horizontal.px: 20
 margin-vertical.px: 32
 
--- ftd.image: 
-src: $countdown-with-info.pic
-width.fixed.percent: 90
-align-self: center
-
 -- ftd.column: 
 margin-vertical.px: 32
 
@@ -651,6 +649,11 @@ role: $inherited.types.copy-small
 color: $colors.text-
 
 -- end: ftd.column
+
+-- ftd.image: 
+src: $countdown-with-info.pic
+width: fill-container
+align-self: center
 
 -- end: ftd.column
 
@@ -773,7 +776,7 @@ margin-horizontal.px: 20
 
 -- ftd.image:
 src: $image-with-content-mobile.pic
-width.fixed.percent: 90
+width: fill-container
 align-self: center
 
 -- ftd.column:
@@ -904,7 +907,6 @@ caption title:
 body body:
 
 -- ftd.column:
-margin.px: 20
 
 -- ftd.column:
 if: { ftd.device == "mobile" }
@@ -925,7 +927,7 @@ color: $colors.text-
 
 -- ftd.image:
 src: $about.pic
-width.fixed.percent: 90
+width: fill-container
 align-self: center
 
 -- end: ftd.column
