@@ -3,8 +3,13 @@
 -- import: admint-io.github.io/Templates/images as images
 -- import: admint-io.github.io/Templates/texts as texts
 -- import: admint-io.github.io/Templates/functions as funct
+-- import: admint-io.github.io/Templates/campPlanPopup1
+
 
 -- string $loadedState: loading 
+
+-- campPlanPopup1.window-popup:
+
 
 -- lib.loader:
 if: { $loadedState == "loading" }
