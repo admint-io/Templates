@@ -22,8 +22,8 @@ resilient future - Be Secured, Stay Secured!"
 
 -- lib.image-with-button: CYBERSECURITY  CONFERENCE  TOKEN
 pic: $images.nft-image-url
-text-1: Blockchain: 
-text-2: POAP Type: 
+text-1: **Blockchain**: 
+text-2: **POAP Type**: 
 val-1: Polygon
 val-2: $texts.nft-type
 button: Claim Now
