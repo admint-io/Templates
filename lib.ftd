@@ -1162,6 +1162,132 @@ colors: $color-values-2
 
 
 
+
+
+
+
+
+
+
+-- boolean $pop-up-status: false
+
+-- component window-popup:
+ftd.image-src pic: 
+caption title:
+body body:
+
+-- ftd.column:
+if: { pop-up-status }
+anchor: window
+width: fill-container
+height: fill-container
+background.solid: $inherited.colors.background.overlay
+z-index: 99999
+
+-- ftd.image:
+src: $assets.files.images.cross.png
+height.fixed.px: 14
+width: auto
+anchor: window
+right.px: 16
+top.px: 20
+$on-click$: $ftd.set-bool($a = $pop-up-status, v = false)
+
+-- ftd.column:
+if: {ftd.device == "desktop"}
+width: fill-container
+height: fill-container
+align-content: center
+
+-- ftd.column:  
+width.fixed.percent: 48
+border-width.px: 1
+border-top-width.px: 2
+border-radius.px: 20
+border-color: $colors.accent-primary-
+padding-vertical.px: 100
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.image:
+src: $window-popup.pic
+align-self: center
+margin-bottom.px: 40
+
+-- end: ftd.column
+
+-- ftd.text: $window-popup.title
+role: $inherited.types.heading-tiny
+width: fill-container
+style: bold
+text-align: center
+color: $colors.text-
+margin-bottom.px: 8
+
+
+-- ftd.text: $window-popup.body
+role: $inherited.types.copy-regular
+text-align: center
+width: fill-container
+color: $colors.text-
+           
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- ftd.column:
+if: {ftd.device == "mobile"}
+width: fill-container
+height: fill-container
+align-content: center
+
+-- ftd.column:  
+width.fixed.percent: 48
+border-width.px: 1
+border-top-width.px: 2
+border-radius.px: 20
+border-color: $colors.accent-primary-
+padding.px: 32
+
+-- ftd.column:
+width: fill-container
+align-content: center
+
+-- ftd.image:
+src: $window-popup.pic
+width.fixed.percent: 50
+align-self: center
+margin-bottom.px: 20
+
+-- end: ftd.column
+
+-- ftd.text: $window-popup.title
+role: $inherited.types.heading-tiny
+width: fill-container
+style: bold
+text-align: center
+color: $colors.text-
+margin-bottom.px: 8
+
+
+-- ftd.text: $window-popup.body
+role: $inherited.types.copy-regular
+text-align: center
+width: fill-container
+color: $colors.text-
+           
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: ftd.column
+
+-- end: window-popup
+
+
+
 -- component loader:
 
 -- ftd.image: 
